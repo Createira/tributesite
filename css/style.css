@@ -1,0 +1,185 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Goldman', cursive;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+  padding: 10px;
+
+  background-color: #092c5a;
+  border-radius: 20px;
+  
+  position: relative;
+}
+
+#title {
+    margin-top: 30px;
+  font-size: 60px;
+  text-align: center;
+
+  color: white;
+}
+
+#subtitle {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+#img-div {
+    background-color: white;
+}
+
+#image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+    padding: 60px 0 0 0;
+    background: #fff;
+    font-size: 25px;
+    text-align: center; 
+}
+
+figcaption {
+  padding: 15px;
+}
+
+#tribute-title {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+}
+
+#tribute-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+    counter-reset: items;
+}
+
+#tribute-item {
+    width: 350px;
+    height: 250px;
+    margin-bottom: 40px;
+    
+    font-size: 25px;
+    color: white;
+    border: 4px solid white;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #094d68, #011927);
+
+    cursor: pointer;
+    position: relative;
+}
+
+#tribute-item::before {
+    display: block;
+    content: counter(items);
+    counter-increment: items;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.tribute-photo {
+    display: block;
+    width: 100%;
+    height: 250px;
+
+    border-radius: 10px;
+    transition: opacity .2s linear;
+}
+
+.item-title {
+    padding: 0 15px;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+}
+
+#tribute-item:hover .tribute-photo {
+    opacity: .1;
+}
+
+#tribute-item:hover .item-title {
+    opacity: 1;
+}
+
+h4 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+#tribute-link {
+    text-decoration: none;
+    color: coral;
+}
+
+#tribute-link:hover {
+    color: rgb(161, 51, 11);
+}
+
+@media (max-width: 638px) {
+    #title {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 340px) {
+    #title {
+        font-size: 25px;
+    }
+
+    #subtitle {
+        font-size: 18px;
+    }
+
+    #tribute-title {
+        margin-top: 30px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+}
